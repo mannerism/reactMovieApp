@@ -8,10 +8,10 @@ class App extends React.Component {
   };
   add = ()  => {
     // this.state.count = 1; this is not recommended to set state because this won't call render function. You should use setstate instead.
-    this.setState({ count: this.state.count + 1 });
+    this.setState(current => ({ count: current.count + 1 }));
   };
   minus = ()  => {
-    this.setState({ count: this.state.count - 1 });
+    this.setState(current => ({ count: current.count - 1 }));
   };
   render() {
     return (
